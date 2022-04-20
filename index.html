@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonneville</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Bonneville</title>
 </head>
 
 <body class="gridBody">
@@ -19,8 +20,10 @@
     </header>
     <header class="headerIcons">
         <ul class="icons">
-            <li><img src="./assets/img/google-maps.png" alt="google-maps" class="iconsImg animate__animated animate__heartBeat" ></li>
-            <li><img src="./assets/img/whatsapp.png" alt="whatsapp contact" class="iconsImg animate__animated animate__heartBeat"></li>
+            <li><img src="./assets/img/google-maps.png" alt="google-maps"
+                    class="iconsImg animate__animated animate__heartBeat"></li>
+            <li><img src="./assets/img/whatsapp.png" alt="whatsapp contact"
+                    class="iconsImg animate__animated animate__heartBeat"></li>
         </ul>
     </header>
     <header class="headerAcces">
@@ -33,25 +36,50 @@
             </li>
         </ul>
     </header>
-    <nav class="nav">
+
+    <nav class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">PRODUCTOS</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">OFERTAS</a>
+        </li>   
+    </nav>
+
+    <!-- <nav class="nav">
         <ul class="navBarNav">
             <li id="inicioB" class="containFull">
                 <h3><a href="./index.html" class="navBarNavItems colorWhite">INICIO</a></h3>
             </li>
             <li class="containFull">
-                <h3><a href="./pages/productos.html" class="navBarNavItems colorWhite">PRODUCTOS</a></h3>
+                <h3><a href="./pages/productos.html" class="navBarNavItems colorWhite">PRODUCTOS</a></h3> -->
+
                 <!-- <ul class="navBarProductos">
                         <li><a href="./pages/productos.html" class="colorWhite">Electricidad</a></li>
                         <li><a href="./pages/productos.html" class="colorWhite">Herramientas</a></li>
                         <li><a href="./pages/productos.html" class="colorWhite">Sanitarios</a></li>
                     </ul> -->
-            </li>
+
+            <!-- </li>
             <li class="containFull">
                 <h3><a href="./pages/ofertas.html" class="navBarNavItems colorWhite">OFERTAS</a></h3>
             </li>
             <li><input type="search" placeholder="Buscar productos" class="searchProduct"></li>
         </ul>
-    </nav>
+    </nav> -->
+
     <main class="main">
         <section class="sectionTitulos">
             <h1>Destacados</h1>
@@ -135,7 +163,8 @@
         </ul>
     </footer>
     <footer class="footerC">
-        <h2 class="footerTitles"><a href="./pages/post-venta.html" class="colorWhite content">Post venta</a></h2>
+        <h2 class="footerTitles"><a href="./pages/post-venta.html" class="colorWhite content">Post venta</a>
+        </h2>
         <ul class="listFooter">
             <li>
                 <h3><a href="./pages/post-venta.html" class="colorWhite">Ayuda</a></h3>
@@ -146,8 +175,11 @@
         </ul>
     </footer>
     <footer class="footerR">
-        <h2 class="footerTitles"><a href="./pages/preguntas.html" class="colorWhite content">Preguntas frecuentes</a></h2>
+        <h2 class="footerTitles"><a href="./pages/preguntas.html" class="colorWhite content">Preguntas
+                frecuentes</a>
+        </h2>
     </footer>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
