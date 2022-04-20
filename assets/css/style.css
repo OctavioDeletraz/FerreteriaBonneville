@@ -12,6 +12,7 @@ html{
     text-decoration: none !important;
     line-height: normal !important;
     color: 000;
+    border: none !important;
 }
 
 body{
@@ -149,7 +150,8 @@ min-height: 100vh;
     padding-right: 1rem;
 }
 
-.nav .navBarNav .containFull .navBarNavItems:hover{
+/* me falta lograr que cambie el color del hover */
+.nav .nav-item:hover{
     color:#080f17;
     background-color: #eaeaea;
 }
