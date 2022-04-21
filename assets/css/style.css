@@ -26,11 +26,11 @@ display: grid;
 grid-template-areas: 
 "headerLog headerLog headerIcons"
 "headerLog headerLog headerAcces"
-"nav nav nav"
+"navBar navBar navBar"
 "main main main"
 "footerL footerC footerR";
 grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 5rem 7rem 3rem auto 12rem ;
+grid-template-rows: 5rem 7rem auto auto 12rem ;
 min-height: 100vh;
 }
 
@@ -48,18 +48,17 @@ min-height: 100vh;
     justify-content: end;
 }
 
-.nav{
-    grid-area: nav;
-    margin: 0 auto;
+.navBar{
+    grid-area: navBar;
     width: 100%;
-    background-color: #2a587e;
-    float: left;
+    background-color: #2a587e !important;
 }
 
 .main{
     grid-area: main;
     background-color: #c4c4c4;
     padding: 10px;
+    min-height: 40rem;
 }
 
 .footerL{
@@ -128,42 +127,22 @@ min-height: 100vh;
     background-color: #E4E4E4;
     color: #080f17;
 }
-.nav .navBarNav{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
 
 /* para que los contenedores padre sin clase puedan llenar todo el height */
 .containFull{
     height: 100%;
 }
 
-.nav .navBarNav .containFull .navBarNavItems{
-    display: flex;
-    align-items: center;
-    max-width: 12rem;
-    height: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
 /* me falta lograr que cambie el color del hover */
-.nav .nav-item:hover{
-    color:#080f17;
+.navBar .nav-item:hover .colorWhite{
+    color:#080f17 !important;
     background-color: #eaeaea;
 }
 
-.nav .navBarNav .searchProduct{
-    display: flex;
-    min-width: 40rem;
-    height: 2.5rem;
-    border-radius: 2rem;
+.navBar .searchProduct{
+    width: 20rem;
+    font-size: 1.5rem;
     border-width: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .footerTitles{
@@ -175,17 +154,7 @@ Header{
 }
  /* para dar color a los vinculos */
 .colorWhite{
-    color: #E4E4E4;
-}
-
-/* oculto el submenu desplegable del menu categorias */
-header  .navBar2 .navBarNav .navBarProductos{
-    display: none;
-}
-
-/* Clase para desplegar un submenu con categorias en PRODUCTOS */
-header  .navBar2 .navBarNav:hover .navBarProductos{
-    display: block;
+    color: #E4E4E4 !important;
 }
 
 footer{
@@ -342,6 +311,11 @@ ul {
     color: #080f17;
 }
 
+.noneMargin{
+    margin: 0rem !important;
+    padding: 0rem !important;
+}
+
 @media screen and (max-width: 1030px) {
 
     #card4D{
@@ -372,10 +346,6 @@ ul {
         display: none;
     }
     
-    .nav .navBarNav .searchProduct{
-    min-width: 25rem;
-    }
-
     .listFooter{
         display: none;
     }
@@ -385,13 +355,13 @@ ul {
         grid-template-areas: 
         "headerLog headerLog headerIcons"
         "headerLog headerLog headerAcces"
-        "nav nav nav"
+        "navBar navBar navBar"
         "main main main"
         "footerL footerL footerL"
         "footerC footerC footerC"
         "footerR footerR footerR";
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 5rem 7rem 3rem auto 3rem 3rem 3rem ;
+        grid-template-rows: 5rem 7rem auto auto 3rem 3rem 3rem ;
         min-height: 100vh;
         }
 
@@ -401,7 +371,7 @@ ul {
 
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
 
     .main .formRegist{
         width: 30rem;
@@ -458,11 +428,6 @@ ul {
         display: none;
     }
 
-    .nav .navBarNav .searchProduct{
-        min-width: 18rem;
-        height: 2rem;
-    }
-
     .listFooter{
         display: none;
     }
@@ -490,13 +455,13 @@ ul {
         grid-template-areas: 
         "headerLog headerLog headerLog"
         "headerAcces headerAcces headerIcons"
-        "nav nav nav"
+        "navBar navBar navBar"
         "main main main"
         "footerL footerL footerL"
         "footerC footerC footerC"
         "footerR footerR footerR";
         grid-template-columns: 1fr 1fr 10rem;
-        grid-template-rows: 8rem 3rem 3rem auto 3rem 3rem 3rem ;
+        grid-template-rows: 8rem 3rem auto auto 3rem 3rem 3rem ;
         min-height: 100vh;
         }
 

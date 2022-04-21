@@ -13,19 +13,19 @@
 
 <body class="gridBody">
     <header class="headerLog">
-        <ul class="navBarLog colorWhite">
+        <ul class="navBarLog colorWhite noneMargin">
             <li><a href="../index.html" class="navBarBrand">Bonneville</a></li>
             <li class="navBarBrandSub">Ferreteria y sanitarios</li>
         </ul>
     </header>
     <header class="headerIcons">
-        <ul class="icons">
-            <li><img src="../assets/img/google-maps.png" alt="google-maps" class="iconsImg"></li>
-            <li><img src="../assets/img/whatsapp.png" alt="whatsapp contact" class="iconsImg"></li>
+        <ul class="icons noneMargin">
+            <li><img src="../assets/img/google-maps.png" alt="google-maps" class="iconsImg animate__animated animate__heartBeat"></li>
+            <li><img src="../assets/img/whatsapp.png" alt="whatsapp contact" class="iconsImg animate__animated animate__heartBeat"></li>
         </ul>
     </header>
     <header class="headerAcces">
-        <ul class="accesNav colorWhite">
+        <ul class="accesNav colorWhite noneMargin">
             <li>
                 <h3><a href="./acceso.html" class="accesItem colorWhite">Acceder</a></h3>
             </li>
@@ -35,39 +35,32 @@
         </ul>
     </header>
 
-    <nav class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link colorWhite" href="../index.html">INICIO</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link colorWhite" href="./productos.html">PRODUCTOS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link colorWhite" href="./ofertas.html">OFERTAS</a>
-        </li>
+    <nav class="navBar navbar navbar-expand-sm navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="./ofertas.html">OFERTAS</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2 searchProduct" type="search" placeholder="Buscar productos"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
     </nav>
-
-    <!-- <nav class="nav">
-        <ul class="navBarNav">
-            <li id="inicioB" class="containFull">
-                <h3><a href="../index.html" class="navBarNavItems colorWhite">INICIO</a></h3>
-            </li>
-            <li class="containFull">
-                <h3><a href="./productos.html" class="navBarNavItems colorWhite">PRODUCTOS</a></h3> -->
-
-    <!-- <ul class="navBarProductos">
-                        <li><a href="./pages/productos.html" class="colorWhite">Electricidad</a></li>
-                        <li><a href="./pages/productos.html" class="colorWhite">Herramientas</a></li>
-                        <li><a href="./pages/productos.html" class="colorWhite">Sanitarios</a></li>
-                    </ul> -->
-
-    <!-- </li>
-            <li class="containFull">
-                <h3><a href="./ofertas.html" class="navBarNavItems colorWhite">OFERTAS</a></h3>
-            </li>
-            <li><input type="text" placeholder="Buscar productos" class="searchProduct"></li>
-        </ul>
-    </nav> -->
 
     <main class="main">
         <form action="" method="get" class="formRegist">
