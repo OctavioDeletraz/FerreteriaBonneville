@@ -323,7 +323,7 @@ ul {
 }
 
 .main .categoriasList{
-    width: 20rem;
+    width: 30rem;
     margin-right: 2rem;
 }
 
@@ -359,7 +359,6 @@ ul {
     grid-area: price;
     color: #080f17;
 }
-
 
 @media screen and (max-width: 1030px) {
 
