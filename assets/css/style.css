@@ -1,649 +1,419 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box !important;
-    text-decoration: none !important;
-    line-height: normal !important;
-    color: 000;
-}
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  line-height: normal !important;
+  color: 000; }
+
+Header {
+  background-color: #080f17; }
 
 body {
-    font-size: 1.8rem;
-    /* para que me muestre como minimo todo el alto de mi pantalla */
-    min-height: 100vh;
-}
+  font-size: 1.8rem;
+  /* para que me muestre como minimo todo el alto de mi pantalla */
+  min-height: 100vh; }
 
 .gridBody {
-    display: grid;
-    grid-template-areas:
-        "headerLog headerLog headerIcons"
-        "headerLog headerLog headerAcces"
-        "navBar navBar navBar"
-        "main main main"
-        "footerL footerC footerR";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5rem 7rem auto auto 12rem;
-    min-height: 100vh;
-}
+  display: grid;
+  grid-template-areas: "headerLog headerLog headerIcons" "headerLog headerLog headerAcces" "navBar navBar navBar" "main main main" "footerL footerC footerR";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 5rem 7rem auto auto 12rem;
+  min-height: 100vh; }
 
 .headerLog {
-    grid-area: headerLog;
-    justify-items: start;
-}
+  grid-area: headerLog;
+  justify-items: start; }
+  .headerLog .navBarLog {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem; }
+    .headerLog .navBarLog .navBarBrand {
+      color: #eaeaea;
+      font-size: 6rem;
+      font-weight: bold; }
+    .headerLog .navBarLog .navBarBrandSub {
+      color: #eaeaea;
+      font-size: 3rem;
+      font-weight: normal; }
 
 .headerIcons {
-    grid-area: headerIcons;
-    justify-items: end;
-}
+  grid-area: headerIcons;
+  justify-items: end; }
+  .headerIcons .icons {
+    display: flex;
+    justify-content: end; }
+    .headerIcons .icons .iconsImg {
+      width: 30px;
+      margin: 1rem; }
 
 .headerAcces {
-    grid-area: headerAcces;
-    justify-content: end;
-}
-
-.navBar {
-    grid-area: navBar;
-    width: 100%;
-    background-color: #2a587e !important;
-}
-
-.main {
-    grid-area: main;
-    background-color: #c4c4c4;
-    padding: 10px;
-    min-height: 40rem;
-}
-
-.footerL {
-    grid-area: footerL;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footerC {
-    grid-area: footerC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footerR {
-    grid-area: footerR;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.headerLog .navBarLog {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-}
-
-.headerLog .navBarLog .navBarBrand {
-    color: #E4E4E4;
-    font-size: 6rem;
-    font-weight: bold;
-}
-
-.headerLog .navBarLog .navBarBrandSub {
-    color: #E4E4E4;
-    font-size: 3rem;
-    font-weight: normal;
-}
-
-.headerIcons .icons {
-    display: flex;
-    justify-content: end;
-}
-
-.headerIcons .icons .iconsImg {
-    width: 30px;
-    margin: 1rem;
-}
-
-.headerAcces .accesNav {
+  grid-area: headerAcces;
+  justify-content: end; }
+  .headerAcces .accesNav {
     display: flex;
     flex-direction: row;
     height: 100%;
     justify-content: end;
-    align-items: flex-end;
-}
+    align-items: flex-end; }
+    .headerAcces .accesNav .accesItem {
+      display: block;
+      margin: 1rem; }
+    .headerAcces .accesNav .accesItem:hover {
+      background-color: #eaeaea;
+      color: #080f17; }
 
-.headerAcces .accesNav .accesItem {
-    display: block;
-    margin: 1rem;
-}
+.navBar {
+  grid-area: navBar;
+  width: 100%;
+  background-color: #2a587e !important; }
+  .navBar .nav-item:hover {
+    background-color: #eaeaea; }
+  .navBar .nav-item .nav-link {
+    color: #eaeaea; }
+    .navBar .nav-item .nav-link:hover {
+      color: #080f17; }
+  .navBar .searchProduct {
+    width: 20rem;
+    font-size: 1.5rem;
+    border-width: 0; }
 
-.headerAcces .accesNav .accesItem:hover {
-    background-color: #E4E4E4;
-    color: #080f17;
-}
+.main {
+  grid-area: main;
+  background-color: #c4c4c4;
+  padding: 10px;
+  min-height: 40rem; }
+  .main .sectionTitulos .cardProducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .main .sectionTitulos .cardProducts .cardProduct {
+      width: 250px;
+      height: 400px;
+      display: inline-block;
+      background-color: #eeee;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+      .main .sectionTitulos .cardProducts .cardProduct:hover {
+        box-shadow: 2px 2px 5px #999; }
+      .main .sectionTitulos .cardProducts .cardProduct .cardProductImage {
+        width: 100%; }
+      .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription {
+        margin: 1rem; }
+        .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
+          font-size: 2rem;
+          color: #080f17; }
+        .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
+          font-size: 1.5rem;
+          color: #080f17; }
+  .main .formRegist {
+    width: 50rem;
+    background-color: #EEEEEE;
+    border-style: solid;
+    border-color: #080f17;
+    border-width: 0.1rem;
+    margin: 0 auto; }
+    .main .formRegist .formTitle {
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .main .formRegist .formList {
+      width: 100%;
+      align-self: center;
+      justify-content: space-between; }
+      .main .formRegist .formList .fields {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; }
+        .main .formRegist .formList .fields .fieldSec {
+          display: flex;
+          flex-direction: column;
+          width: 22rem; }
+    .main .formRegist .botonRegist {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+  .main .formAcces {
+    width: 50rem;
+    background-color: #EEEEEE;
+    border-style: solid;
+    border-color: #080f17;
+    border-width: 0.1rem;
+    margin: 0 auto; }
+    .main .formAcces .formTitle {
+      width: 100%;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .main .formAcces .formList {
+      width: 100%;
+      align-self: center;
+      justify-content: space-between; }
+      .main .formAcces .formList .fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .main .formAcces .formList .fields .fieldSec {
+          display: flex;
+          flex-direction: column;
+          width: 30rem; }
+    .main .formAcces .botonAcces {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+  .main .mapaGoogle {
+    width: 400px;
+    height: 300px; }
+
+ul {
+  list-style-type: none; }
+
+.footerL {
+  grid-area: footerL;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footerC {
+  grid-area: footerC;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footerR {
+  grid-area: footerR;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /* para que los contenedores padre sin clase puedan llenar todo el height */
 .containFull {
-    height: 100%;
-}
-
-/* me falta lograr que cambie el color del hover */
-.navBar .nav-item:hover .colorWhite {
-    color: #080f17 !important;
-    background-color: #eaeaea;
-}
-
-.navBar .searchProduct {
-    width: 20rem;
-    font-size: 1.5rem;
-    border-width: 0;
-}
+  height: 100%; }
 
 .footerTitles {
-    margin-top: 1rem;
-}
-
-Header {
-    background-color: #080f17;
-}
+  margin-top: 1rem; }
 
 /* para dar color a los vinculos */
 .colorWhite {
-    color: #E4E4E4 !important;
-}
+  color: #eaeaea; }
 
 footer {
-    background-color: #080f17;
-    color: #E4E4E4;
-}
+  background-color: #080f17;
+  color: #eaeaea; }
 
 h1 {
-    font-size: 3rem;
-    color: 000;
-    font-weight: bold;
-}
+  font-size: 3rem;
+  color: 000;
+  font-weight: bold; }
 
 h2 {
-    font-size: 2rem;
-    color: #E4E4E4;
-    font-weight: normal;
-}
+  font-size: 2rem;
+  color: #eaeaea;
+  font-weight: normal; }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: normal;
-}
-
-/* a partir de aca hay que revisar */
-
-.main .sectionTitulos .cardProducts {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct {
-    width: 250px;
-    height: 400px;
-    display: inline-block;
-    background-color: #eeee;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct:hover {
-    box-shadow: 2px 2px 5px #999;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct .cardProductImage {
-    width: 100%;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct .cardProductDescription {
-    margin: 1rem;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
-    font-size: 2rem;
-    color: #080f17;
-}
-
-.main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
-    font-size: 1.5rem;
-    color: #080f17;
-}
-
-.main .formRegist {
-    width: 50rem;
-    background-color: #EEEEEE;
-    border-style: solid;
-    border-color: #080f17;
-    border-width: 0.1rem;
-    margin: 0 auto;
-}
-
-.main .formAcces {
-    width: 50rem;
-    background-color: #EEEEEE;
-    border-style: solid;
-    border-color: #080f17;
-    border-width: 0.1rem;
-    margin: 0 auto;
-}
-
-.main .formRegist .formTitle {
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main .formAcces .formTitle {
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main .formRegist .formList {
-    width: 100%;
-    align-self: center;
-    justify-content: space-between;
-}
-
-.main .formAcces .formList {
-    width: 100%;
-    align-self: center;
-    justify-content: space-between;
-}
-
-.main .formRegist .formList .fields {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.main .formAcces .formList .fields {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.main .formRegist .formList .fields .fieldSec {
-    display: flex;
-    flex-direction: column;
-    width: 22rem;
-}
-
-.main .formAcces .formList .fields .fieldSec {
-    display: flex;
-    flex-direction: column;
-    width: 30rem;
-}
-
-.main .formRegist .botonRegist {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main .formAcces .botonAcces {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main .mapaGoogle {
-    width: 400px;
-    height: 300px;
-}
+  font-size: 1.5rem;
+  font-weight: normal; }
 
 .black {
-    color: #080f17;
-}
+  color: #080f17; }
 
 .noneMargin {
-    margin: 0rem !important;
-    padding: 0rem !important;
-}
+  margin: 0rem !important;
+  padding: 0rem !important; }
 
-.displayMainProducts{
-    display: flex;
-    flex-direction: row;
-}
+.displayMainProducts {
+  display: flex;
+  flex-direction: row; }
 
-.main .categoriasList{
-    width: 30rem;
-    margin-right: 2rem;
-}
+.main .categoriasList {
+  width: 30rem;
+  margin-right: 2rem; }
 
-.main .productos{
-    width: 100%;
-}
+.main .productos {
+  width: 100%; }
 
-.gridProductList{
-    display: grid;
-    grid-template-areas: 
-    "img title price"
-    "img description description";
-    grid-template-columns: 17rem auto 10rem;
-    grid-template-rows: auto auto;
-}
+.gridProductList {
+  display: grid;
+  grid-template-areas: "img title price" "img description description";
+  grid-template-columns: 17rem auto 10rem;
+  grid-template-rows: auto auto; }
 
-.imgProductList{
-    grid-area: img;
-    height: 15rem;
-    width: 15rem;
-    margin: 1rem;
-}
+.imgProductList {
+  grid-area: img;
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem; }
 
-.titleCardList{
-    grid-area: title;
-}
+.titleCardList {
+  grid-area: title; }
 
-.descriptionCardList{
-    grid-area: description;
-}
+.descriptionCardList {
+  grid-area: description; }
 
-.priceCardList{
-    grid-area: price;
-    color: #080f17;
-}
+.priceCardList {
+  grid-area: price;
+  color: #080f17; }
 
 @media screen and (max-width: 1030px) {
-
-    #card4D {
-        display: none;
-    }
-
-    #card4U {
-        display: none;
-    }
-
-}
+  #card4D {
+    display: none; }
+  #card4U {
+    display: none; } }
 
 @media screen and (max-width: 770px) {
-
-    .main .categoriasList{
-        margin-right: 0rem;
-    }
-
-    #card3D {
-        display: none;
-    }
-
-    #card3U {
-        display: none;
-    }
-
-    #card4D {
-        display: none;
-    }
-
-    #card4U {
-        display: none;
-    }
-
-    .listFooter {
-        display: none;
-    }
-
-    .gridBody {
-        display: grid;
-        grid-template-areas:
-            "headerLog headerLog headerIcons"
-            "headerLog headerLog headerAcces"
-            "navBar navBar navBar"
-            "main main main"
-            "footerL footerL footerL"
-            "footerC footerC footerC"
-            "footerR footerR footerR";
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 5rem 7rem auto auto 3rem 3rem 3rem;
-        min-height: 100vh;
-    }
-
-    .footerTitles {
-        margin: 0;
-    }
-
-    .gridProductList{
-        display: grid;
-        grid-template-areas: 
-        "img title"
-        "img price";
-        grid-template-columns: 12rem auto;
-        grid-template-rows: auto auto;
-    }
-
-    .descriptionCardList{
-        display: none;
-    }
-
-    .imgProductList{
-        grid-area: img;
-        height: 10rem;
-        width: 10rem;
-        margin: 1rem;
-    }
-    
-    .titleCardList{
-        grid-area: title;
-        font-size: 2rem;
-    }
-    
-    
-    .priceCardList{
-        grid-area: price;
-        color: #080f17;
-    }
-
-    .gridMainProducts{
-        display: grid;
-        grid-template-rows: auto auto;
-    }
-
-    .displayMainProducts{
-        display: flex;
-        flex-direction: column;
-    }
-}
+  .main .categoriasList {
+    margin-right: 0rem; }
+  #card3D {
+    display: none; }
+  #card3U {
+    display: none; }
+  #card4D {
+    display: none; }
+  #card4U {
+    display: none; }
+  .listFooter {
+    display: none; }
+  .gridBody {
+    display: grid;
+    grid-template-areas: "headerLog headerLog headerIcons" "headerLog headerLog headerAcces" "navBar navBar navBar" "main main main" "footerL footerL footerL" "footerC footerC footerC" "footerR footerR footerR";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5rem 7rem auto auto 3rem 3rem 3rem;
+    min-height: 100vh; }
+  .footerTitles {
+    margin: 0; }
+  .gridProductList {
+    display: grid;
+    grid-template-areas: "img title" "img price";
+    grid-template-columns: 12rem auto;
+    grid-template-rows: auto auto; }
+  .descriptionCardList {
+    display: none; }
+  .imgProductList {
+    grid-area: img;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem; }
+  .titleCardList {
+    grid-area: title;
+    font-size: 2rem; }
+  .priceCardList {
+    grid-area: price;
+    color: #080f17; }
+  .gridMainProducts {
+    display: grid;
+    grid-template-rows: auto auto; }
+  .displayMainProducts {
+    display: flex;
+    flex-direction: column; } }
 
 @media screen and (max-width: 550px) {
-
-    .main .formRegist {
-        width: 30rem;
-    }
-
-    .main .formAcces {
-        width: 30rem;
-    }
-
-    .main .formAcces .formList .fields .fieldSec {
-        width: 25rem;
-    }
-
-    .main .formRegist .formList .fields {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main .mapaGoogle {
-        width: 300px;
-        height: 200px;
-    }
-
-    .main .sectionTitulos .cardProducts .cardProduct {
-        width: 15rem;
-        height: 25rem;
-        display: inline-block;
-        background-color: #eeee;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .headerLog .navBarLog .navBarBrand {
-        font-size: 4rem;
-    }
-
-    .headerLog .navBarLog .navBarBrandSub {
-        font-size: 2rem;
-    }
-
-    #inicioB {
-        display: none;
-    }
-
-    #card3D {
-        display: none;
-    }
-
-    #card4d {
-        display: none;
-    }
-
-    #card3U {
-        display: none;
-    }
-
-    #card4U {
-        display: none;
-    }
-
-    .listFooter {
-        display: none;
-    }
-
-    .headerIcons .icons .iconsImg {
-        width: 2rem;
-        margin: 0.5rem;
-    }
-
-    .headerAcces .accesNav {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        justify-content: start;
-        align-items: flex-end;
-    }
-
-    .headerAcces .accesNav .accesItem {
-        display: block;
-        margin: 0.5rem;
-    }
-
-    .gridBody {
-        display: grid;
-        grid-template-areas:
-            "headerLog headerLog headerLog"
-            "headerAcces headerAcces headerIcons"
-            "navBar navBar navBar"
-            "main main main"
-            "footerL footerL footerL"
-            "footerC footerC footerC"
-            "footerR footerR footerR";
-        grid-template-columns: 1fr 1fr 10rem;
-        grid-template-rows: 8rem 3rem auto auto 3rem 3rem 3rem;
-        min-height: 100vh;
-    }
-
-    .gridProductList{
-        grid-template-columns: 9rem auto;
-    }
-
-    .footerTitles{
-        margin: 0;
-    }
-
-    .imgProductList{
-        grid-area: img;
-        height: 7rem;
-        width: 7rem;
-        margin: 1rem;
-    }
-    
-    .titleCardList{
-        grid-area: title;
-        font-size: 1.5rem;
-    }
-}
+  .main .formRegist {
+    width: 30rem; }
+  .main .formAcces {
+    width: 30rem; }
+  .main .formAcces .formList .fields .fieldSec {
+    width: 25rem; }
+  .main .formRegist .formList .fields {
+    flex-direction: column;
+    align-items: center; }
+  .main .mapaGoogle {
+    width: 300px;
+    height: 200px; }
+  .main .sectionTitulos .cardProducts .cardProduct {
+    width: 15rem;
+    height: 25rem;
+    display: inline-block;
+    background-color: #eaeaea;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .headerLog .navBarLog .navBarBrand {
+    font-size: 4rem; }
+  .headerLog .navBarLog .navBarBrandSub {
+    font-size: 2rem; }
+  #inicioB {
+    display: none; }
+  #card3D {
+    display: none; }
+  #card4d {
+    display: none; }
+  #card3U {
+    display: none; }
+  #card4U {
+    display: none; }
+  .listFooter {
+    display: none; }
+  .headerIcons .icons .iconsImg {
+    width: 2rem;
+    margin: 0.5rem; }
+  .headerAcces .accesNav {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: start;
+    align-items: flex-end; }
+  .headerAcces .accesNav .accesItem {
+    display: block;
+    margin: 0.5rem; }
+  .gridBody {
+    display: grid;
+    grid-template-areas: "headerLog headerLog headerLog" "headerAcces headerAcces headerIcons" "navBar navBar navBar" "main main main" "footerL footerL footerL" "footerC footerC footerC" "footerR footerR footerR";
+    grid-template-columns: 1fr 1fr 10rem;
+    grid-template-rows: 8rem 3rem auto auto 3rem 3rem 3rem;
+    min-height: 100vh; }
+  .gridProductList {
+    grid-template-columns: 9rem auto; }
+  .footerTitles {
+    margin: 0; }
+  .imgProductList {
+    grid-area: img;
+    height: 7rem;
+    width: 7rem;
+    margin: 1rem; }
+  .titleCardList {
+    grid-area: title;
+    font-size: 1.5rem; } }
 
 @media screen and (max-width: 360px) {
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
-        font-size: 1.5rem;
-    }
-
-    main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
-        font-size: 1.2rem;
-    }
-
-    main .sectionTitulos .cardProducts .cardProduct {
-        width: 15rem;
-        height: 25rem;
-        display: inline-block;
-        background-color: #eeee;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #card3D {
-        display: none;
-    }
-
-    #card4D {
-        display: none;
-    }
-
-    #card3U {
-        display: none;
-    }
-
-    #card4U {
-        display: none;
-    }
-
-    .gridProductList{
-        display: grid;
-        grid-template-areas: 
-        "title"
-        "price"
-        "img";
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto;
-    }
-
-.titleCardList{
-    text-align: center;
-}
-
-.priceCardList{
-    text-align: center;
-}
-
-.imgProductList{
-    justify-self: center;
-}
-}
+  h1 {
+    font-size: 2rem; }
+  h2 {
+    font-size: 1.5rem; }
+  h3 {
+    font-size: 1rem; }
+  main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
+    font-size: 1.5rem; }
+  main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
+    font-size: 1.2rem; }
+  main .sectionTitulos .cardProducts .cardProduct {
+    width: 15rem;
+    height: 25rem;
+    display: inline-block;
+    background-color: #eaeaea;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #card3D {
+    display: none; }
+  #card4D {
+    display: none; }
+  #card3U {
+    display: none; }
+  #card4U {
+    display: none; }
+  .gridProductList {
+    display: grid;
+    grid-template-areas: "title" "price" "img";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto; }
+  .titleCardList {
+    text-align: center; }
+  .priceCardList {
+    text-align: center; }
+  .imgProductList {
+    justify-self: center; } }
