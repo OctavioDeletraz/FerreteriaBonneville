@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "./variables.scss";
 
 html {
     font-size: 62.5%;
 }
-
-;
-
-$color-white: #eaeaea;
-$color-DarkBlue: #080f17;
-$color-BackgroundNav: #2a587e;
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -17,9 +12,7 @@ $color-BackgroundNav: #2a587e;
     box-sizing: border-box !important;
     text-decoration: none !important;
     line-height: normal !important;
-    color: 000;
 }
-
 
 Header {
     background-color: $color-DarkBlue;
@@ -49,8 +42,7 @@ body {
     justify-items: start;
 
     .navBarLog {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         margin-left: 1rem;
 
         .navBarBrand {
@@ -87,8 +79,7 @@ body {
     justify-content: end;
 
     .accesNav {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         height: 100%;
         justify-content: end;
         align-items: flex-end;
@@ -133,27 +124,26 @@ body {
 
 .main {
     grid-area: main;
-    background-color: #c4c4c4;
+    background-color: $color-BackgroundBody;
     padding: 10px;
     min-height: 40rem;
 
     //index
     .sectionTitulos {
         .cardProducts {
-            display: flex;
-            flex-direction: row;
+            @include flex-row;
             justify-content: space-evenly;
 
             .cardProduct {
-                width: 250px;
-                height: 400px;
-                display: inline-block;
-                background-color: #eeee;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                width: map-get($cardProductIndex, width);
+                height: map-get($cardProductIndex, height);
+                display: map-get($cardProductIndex, display);
+                background-color: map-get($cardProductIndex, background-color);
+                margin-top: map-get($cardProductIndex, margin-top);
+                margin-bottom: map-get($cardProductIndex, margin-bottom);
 
                 &:hover {
-                    box-shadow: 2px 2px 5px #999;
+                    box-shadow: 2px 2px 5px $color-DarkBlue;
                 }
 
                 .cardProductImage {
@@ -179,12 +169,12 @@ body {
 
     // Inicio pagina Registro
     .formRegist {
-        width: 50rem;
-        background-color: #EEEEEE;
-        border-style: solid;
-        border-color: $color-DarkBlue;
-        border-width: 0.1rem;
-        margin: 0 auto;
+        width: map-get($formulario, width);
+        background-color: map-get($formulario, background-color);
+        border-style: map-get($formulario, border-style);
+        border-color: map-get($formulario, border-color);
+        border-width: map-get($formulario, border-width);
+        margin: map-get($formulario, margin);
 
         .formTitle {
             width: 100%;
@@ -197,15 +187,14 @@ body {
             width: 100%;
             align-self: center;
             justify-content: space-between;
+            padding: 0rem;
 
             .fields {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-evenly;
 
                 .fieldSec {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex-column;
                     width: 22rem;
                 }
             }
@@ -222,12 +211,12 @@ body {
 
     // Inicio pagina Acceso
     .formAcces {
-        width: 50rem;
-        background-color: #EEEEEE;
-        border-style: solid;
-        border-color: $color-DarkBlue;
-        border-width: 0.1rem;
-        margin: 0 auto;
+        width: map-get($formulario, width);
+        background-color: map-get($formulario, background-color);
+        border-style: map-get($formulario, border-style);
+        border-color: map-get($formulario, border-color);
+        border-width: map-get($formulario, border-width);
+        margin: map-get($formulario, margin);
 
         .formTitle {
             width: 100%;
@@ -240,15 +229,14 @@ body {
             width: 100%;
             align-self: center;
             justify-content: space-between;
+            padding: 0rem;
 
             .fields {
-                display: flex;
-                flex-direction: column;
+                @include flex-column;
                 align-items: center;
 
                 .fieldSec {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex-column;
                     width: 30rem;
                 }
             }
@@ -274,25 +262,24 @@ ul {
     list-style-type: none;
 }
 
+.footer {
+    @include flex-column;
+    align-items: center;
+}
+
 .footerL {
     grid-area: footerL;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend.footer
 }
 
 .footerC {
     grid-area: footerC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend.footer
 }
 
 .footerR {
     grid-area: footerR;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend.footer
 }
 
 /* para que los contenedores padre sin clase puedan llenar todo el height */
@@ -317,8 +304,8 @@ footer {
 
 h1 {
     font-size: 3rem;
-    color: 000;
     font-weight: bold;
+    color: $color-DarkBlue;
 }
 
 h2 {

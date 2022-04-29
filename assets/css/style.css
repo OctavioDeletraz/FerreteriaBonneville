@@ -8,8 +8,7 @@ html {
   padding: 0;
   box-sizing: border-box !important;
   text-decoration: none !important;
-  line-height: normal !important;
-  color: 000; }
+  line-height: normal !important; }
 
 Header {
   background-color: #080f17; }
@@ -96,11 +95,11 @@ body {
       width: 250px;
       height: 400px;
       display: inline-block;
-      background-color: #eeee;
+      background-color: #eaeaea;
       margin-top: 20px;
       margin-bottom: 20px; }
       .main .sectionTitulos .cardProducts .cardProduct:hover {
-        box-shadow: 2px 2px 5px #999; }
+        box-shadow: 2px 2px 5px #080f17; }
       .main .sectionTitulos .cardProducts .cardProduct .cardProductImage {
         width: 100%; }
       .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription {
@@ -113,7 +112,7 @@ body {
           color: #080f17; }
   .main .formRegist {
     width: 50rem;
-    background-color: #EEEEEE;
+    background-color: #eaeaea;
     border-style: solid;
     border-color: #080f17;
     border-width: 0.1rem;
@@ -126,7 +125,8 @@ body {
     .main .formRegist .formList {
       width: 100%;
       align-self: center;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 0rem; }
       .main .formRegist .formList .fields {
         display: flex;
         flex-direction: row;
@@ -141,7 +141,7 @@ body {
       margin-bottom: 1rem; }
   .main .formAcces {
     width: 50rem;
-    background-color: #EEEEEE;
+    background-color: #eaeaea;
     border-style: solid;
     border-color: #080f17;
     border-width: 0.1rem;
@@ -154,7 +154,8 @@ body {
     .main .formAcces .formList {
       width: 100%;
       align-self: center;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 0rem; }
       .main .formAcces .formList .fields {
         display: flex;
         flex-direction: column;
@@ -174,23 +175,19 @@ body {
 ul {
   list-style-type: none; }
 
-.footerL {
-  grid-area: footerL;
+.footer, .footerL, .footerC, .footerR {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.footerL {
+  grid-area: footerL; }
 
 .footerC {
-  grid-area: footerC;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  grid-area: footerC; }
 
 .footerR {
-  grid-area: footerR;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  grid-area: footerR; }
 
 /* para que los contenedores padre sin clase puedan llenar todo el height */
 .containFull {
@@ -209,8 +206,8 @@ footer {
 
 h1 {
   font-size: 3rem;
-  color: 000;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #080f17; }
 
 h2 {
   font-size: 2rem;

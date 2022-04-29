@@ -1,0 +1,32 @@
+$color-white: #eaeaea;
+$color-DarkBlue: #080f17;
+$color-BackgroundNav: #2a587e;
+$color-BackgroundBody: #c4c4c4;
+
+$fuentes:(header);
+
+$cardProductIndex:(width: 250px,
+    height: 400px,
+    display: inline-block,
+    background-color: $color-white,
+    margin-top: 20px,
+    margin-bottom: 20px,
+);
+
+$formulario:(width: 50rem,
+    background-color: $color-white,
+    border-style: solid,
+    border-color: $color-DarkBlue,
+    border-width: 0.1rem,
+    margin: 0 auto,
+);
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
