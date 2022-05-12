@@ -105,8 +105,7 @@ body {
         box-shadow: 2px 2px 5px #080f17; }
       .main .cardProducts .cardProduct .cardProductImage {
         width: 100%;
-        height: auto;
-        max-height: 25rem; }
+        height: 25rem; }
       .main .cardProducts .cardProduct .cardProductDescription {
         margin: 1rem; }
         .main .cardProducts .cardProduct .cardProductDescription .priceIncorrect {
@@ -225,11 +224,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: normal; }
 
-.black {
-  color: #080f17; }
-
-.noneMargin {
-  margin: 0rem !important;
+.nonePadding {
   padding: 0rem !important; }
 
 .displayMainProducts {
@@ -320,23 +315,21 @@ h3 {
 @media screen and (max-width: 550px) {
   .main .formRegist {
     width: 30rem; }
-  .main .formAcces {
-    width: 30rem; }
-    .main .formAcces .formList .fields {
+    .main .formRegist .formList .fields {
       flex-direction: column;
       align-items: center; }
-      .main .formAcces .formList .fields .fieldsec {
-        width: 25rem; }
+  .main .formAcces {
+    width: 30rem; }
+    .main .formAcces .formList .fields .fieldSec {
+      width: 25rem; }
   .main .mapaGoogle {
     width: 300px;
     height: 200px; }
   .main .cardProducts .cardProduct {
     width: 15rem;
-    height: 25rem;
-    display: inline-block;
-    background-color: #eaeaea;
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    height: 25rem; }
+    .main .cardProducts .cardProduct .cardProductImage {
+      height: 15rem; }
     .main .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
       font-size: 1.5rem; }
     .main .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
@@ -402,6 +395,16 @@ h3 {
     background-color: #eaeaea;
     margin-top: 20px;
     margin-bottom: 20px; }
+  .main .formRegist {
+    width: 25rem; }
+  .main .formAcces {
+    width: 25rem; }
+    .main .formAcces .formList .fields .fieldSec {
+      width: 20rem; }
+  #card2D {
+    display: none; }
+  #card2U {
+    display: none; }
   #card3D {
     display: none; }
   #card4D {
