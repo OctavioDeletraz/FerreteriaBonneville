@@ -99,7 +99,7 @@ body {
 .navBar {
     grid-area: navBar;
     width: 100%;
-    background-color: $color-BackgroundNav !important;
+    background-color: $color-BackgroundNav  !important;
 
     .nav-item {
         &:hover {
@@ -128,40 +128,49 @@ body {
     padding: 10px;
     min-height: 40rem;
 
-    //index
-    .sectionTitulos {
-        .cardProducts {
-            @include flex-row;
-            justify-content: space-evenly;
+    h2 {
+        color: $color-DarkBlue;
+        font-weight: bolder;
+    }
 
-            .cardProduct {
-                width: map-get($cardProductIndex, width);
-                height: map-get($cardProductIndex, height);
-                display: map-get($cardProductIndex, display);
-                background-color: map-get($cardProductIndex, background-color);
-                margin-top: map-get($cardProductIndex, margin-top);
-                margin-bottom: map-get($cardProductIndex, margin-bottom);
+    //index + OFERTAS
+    .cardProducts {
+        @include flex-row;
+        justify-content: space-evenly;
 
-                &:hover {
-                    box-shadow: 2px 2px 5px $color-DarkBlue;
+        .cardProduct {
+            width: map-get($cardProductIndex, width);
+            height: map-get($cardProductIndex, height);
+            display: map-get($cardProductIndex, display);
+            background-color: map-get($cardProductIndex, background-color);
+            margin-top: map-get($cardProductIndex, margin-top);
+            margin-bottom: map-get($cardProductIndex, margin-bottom);
+
+            &:hover {
+                box-shadow: 2px 2px 5px $color-DarkBlue;
+            }
+
+            .cardProductImage {
+                width: 100%;
+                height: auto;
+                max-height: 25rem;
+            }
+
+            .cardProductDescription {
+                margin: 1rem;
+
+                .priceIncorrect {
+                    text-decoration: line-through !important;
                 }
 
-                .cardProductImage {
-                    width: 100%;
+                .cardProductDescriptionPrice {
+                    font-size: 2rem;
+                    color: $color-DarkBlue;
                 }
 
-                .cardProductDescription {
-                    margin: 1rem;
-
-                    .cardProductDescriptionPrice {
-                        font-size: 2rem;
-                        color: $color-DarkBlue;
-                    }
-
-                    .cardProductDescripionText {
-                        font-size: 1.5rem;
-                        color: $color-DarkBlue;
-                    }
+                .cardProductDescripionText {
+                    font-size: 1.5rem;
+                    color: $color-DarkBlue;
                 }
             }
         }
@@ -386,8 +395,10 @@ h3 {
 
 @media screen and (max-width: 770px) {
 
-    .main .categoriasList {
-        margin-right: 0rem;
+    .main {
+        .categoriasList {
+            margin-right: 0rem;
+        }
     }
 
     #card3D {
@@ -473,43 +484,63 @@ h3 {
 
 @media screen and (max-width: 550px) {
 
-    .main .formRegist {
-        width: 30rem;
+    .main {
+        .formRegist {
+            width: 30rem;
+        }
+
+        .formAcces {
+            width: 30rem;
+
+            .formList {
+                .fields {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .fieldsec {
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+
+        .mapaGoogle {
+            width: 300px;
+            height: 200px;
+        }
+
+        .cardProducts {
+            .cardProduct {
+                width: 15rem;
+                height: 25rem;
+                display: inline-block;
+                background-color: $color-white;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                .cardProductDescription {
+                    .cardProductDescriptionPrice {
+                        font-size: 1.5rem;
+                    }
+
+                    .cardProductDescripionText {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 
-    .main .formAcces {
-        width: 30rem;
-    }
+    .headerLog {
+        .navBarLog {
+            .navBarBrand {
+                font-size: 4rem;
+            }
 
-    .main .formAcces .formList .fields .fieldSec {
-        width: 25rem;
-    }
-
-    .main .formRegist .formList .fields {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main .mapaGoogle {
-        width: 300px;
-        height: 200px;
-    }
-
-    .main .sectionTitulos .cardProducts .cardProduct {
-        width: 15rem;
-        height: 25rem;
-        display: inline-block;
-        background-color: $color-white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .headerLog .navBarLog .navBarBrand {
-        font-size: 4rem;
-    }
-
-    .headerLog .navBarLog .navBarBrandSub {
-        font-size: 2rem;
+            .navBarBrandSub {
+                font-size: 2rem;
+            }
+        }
     }
 
     #inicioB {
@@ -536,22 +567,28 @@ h3 {
         display: none;
     }
 
-    .headerIcons .icons .iconsImg {
-        width: 2rem;
-        margin: 0.5rem;
+    .headerIcons {
+        .icons {
+            .iconsImg {
+                width: 2rem;
+                margin: 0.5rem;
+            }
+        }
     }
 
-    .headerAcces .accesNav {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        justify-content: start;
-        align-items: flex-end;
-    }
+    .headerAcces {
+        .accesNav {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: start;
+            align-items: flex-end;
 
-    .headerAcces .accesNav .accesItem {
-        display: block;
-        margin: 0.5rem;
+            .accesItem {
+                display: block;
+                margin: 0.5rem;
+            }
+        }
     }
 
     .gridBody {
@@ -604,21 +641,16 @@ h3 {
         font-size: 1rem;
     }
 
-    main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
-        font-size: 1.5rem;
-    }
+    .main {
+        .cardProduct {
+            width: 15rem;
+            height: 20rem;
+            display: inline-block;
+            background-color: $color-white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-    main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
-        font-size: 1.2rem;
-    }
-
-    main .sectionTitulos .cardProducts .cardProduct {
-        width: 15rem;
-        height: 25rem;
-        display: inline-block;
-        background-color: $color-white;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 
     #card3D {

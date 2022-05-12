@@ -87,27 +87,34 @@ body {
   background-color: #c4c4c4;
   padding: 10px;
   min-height: 40rem; }
-  .main .sectionTitulos .cardProducts {
+  .main h2 {
+    color: #080f17;
+    font-weight: bolder; }
+  .main .cardProducts {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; }
-    .main .sectionTitulos .cardProducts .cardProduct {
+    .main .cardProducts .cardProduct {
       width: 250px;
       height: 400px;
       display: inline-block;
       background-color: #eaeaea;
       margin-top: 20px;
       margin-bottom: 20px; }
-      .main .sectionTitulos .cardProducts .cardProduct:hover {
+      .main .cardProducts .cardProduct:hover {
         box-shadow: 2px 2px 5px #080f17; }
-      .main .sectionTitulos .cardProducts .cardProduct .cardProductImage {
-        width: 100%; }
-      .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription {
+      .main .cardProducts .cardProduct .cardProductImage {
+        width: 100%;
+        height: auto;
+        max-height: 25rem; }
+      .main .cardProducts .cardProduct .cardProductDescription {
         margin: 1rem; }
-        .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
+        .main .cardProducts .cardProduct .cardProductDescription .priceIncorrect {
+          text-decoration: line-through !important; }
+        .main .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
           font-size: 2rem;
           color: #080f17; }
-        .main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
+        .main .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
           font-size: 1.5rem;
           color: #080f17; }
   .main .formRegist {
@@ -315,21 +322,25 @@ h3 {
     width: 30rem; }
   .main .formAcces {
     width: 30rem; }
-  .main .formAcces .formList .fields .fieldSec {
-    width: 25rem; }
-  .main .formRegist .formList .fields {
-    flex-direction: column;
-    align-items: center; }
+    .main .formAcces .formList .fields {
+      flex-direction: column;
+      align-items: center; }
+      .main .formAcces .formList .fields .fieldsec {
+        width: 25rem; }
   .main .mapaGoogle {
     width: 300px;
     height: 200px; }
-  .main .sectionTitulos .cardProducts .cardProduct {
+  .main .cardProducts .cardProduct {
     width: 15rem;
     height: 25rem;
     display: inline-block;
     background-color: #eaeaea;
     margin-top: 20px;
     margin-bottom: 20px; }
+    .main .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
+      font-size: 1.5rem; }
+    .main .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
+      font-size: 1.2rem; }
   .headerLog .navBarLog .navBarBrand {
     font-size: 4rem; }
   .headerLog .navBarLog .navBarBrandSub {
@@ -355,9 +366,9 @@ h3 {
     height: 100%;
     justify-content: start;
     align-items: flex-end; }
-  .headerAcces .accesNav .accesItem {
-    display: block;
-    margin: 0.5rem; }
+    .headerAcces .accesNav .accesItem {
+      display: block;
+      margin: 0.5rem; }
   .gridBody {
     display: grid;
     grid-template-areas: "headerLog headerLog headerLog" "headerAcces headerAcces headerIcons" "navBar navBar navBar" "main main main" "footerL footerL footerL" "footerC footerC footerC" "footerR footerR footerR";
@@ -384,13 +395,9 @@ h3 {
     font-size: 1.5rem; }
   h3 {
     font-size: 1rem; }
-  main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescriptionPrice {
-    font-size: 1.5rem; }
-  main .sectionTitulos .cardProducts .cardProduct .cardProductDescription .cardProductDescripionText {
-    font-size: 1.2rem; }
-  main .sectionTitulos .cardProducts .cardProduct {
+  .main .cardProduct {
     width: 15rem;
-    height: 25rem;
+    height: 20rem;
     display: inline-block;
     background-color: #eaeaea;
     margin-top: 20px;
